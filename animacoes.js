@@ -1,15 +1,3 @@
-// const elementos = document.querySelectorAll(".blocoHabilidades");
-
-// const observer = new IntersectionObserver(entries => {
-//   entries.forEach(entry => {
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("visivel");
-//     }
-//   });
-// }, { threshold: 0.2 });
-
-// elementos.forEach(el => observer.observe(el));
-
 gsap.registerPlugin(ScrollTrigger);
 
 // Configuração padrão
@@ -74,7 +62,7 @@ animarSecao(
 
 animarSecao(
 "#resumo",
-"#resumo h2, #resumo .trabalho, #resumo .estudo"
+"#resumo h2, #resumo .experiencia, #resumo .experiencia"
 );
 
 animarSecao(

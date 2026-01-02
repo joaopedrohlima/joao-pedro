@@ -90,6 +90,7 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    box-sizing: border-box;
 }
 
 .botao {
@@ -199,7 +200,7 @@ h2 {
         flex-wrap: wrap;
         gap: 1rem;
     }
-        #servicos .caixas .caixa {
+        #servicos .caixa {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -208,7 +209,7 @@ h2 {
             border-radius: var(--border-radius);
             text-align: center;
         }
-            #servicos .caixas .caixa .icon {
+            #servicos .caixa .icon {
                 width: 3rem;
                 height: 3rem;
                 display: flex;
@@ -218,6 +219,11 @@ h2 {
                 border: 1px solid var(--cor-principal);
                 color: var(--cor-principal);
             }
+            #servicos .caixa span {
+                line-height: 1.5em;
+                color: var(--cinza-5);
+            }
+            
 
 
 #habilidades .blocoHabilidades {
@@ -231,6 +237,7 @@ h2 {
     gap: 0.5rem;
     align-items: center;
     margin: 1rem 0 0.5rem 0;
+    width: 100%;
 }
     #habilidades .titulo img {
         width: 1.2rem;
@@ -256,8 +263,6 @@ h2 {
         font-size: 1.8rem;
     }
 
-
-        
 
 
 #resumo .titulo {
@@ -313,13 +318,19 @@ h2 {
                 line-height: 1.5em;
             }
 
+
+
 #contato {
     background-color: #0e0e0e;
     border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 #contato .conteudo {
     padding-bottom: 2rem;
+    gap: 2rem;
 }
+    #contato h3 {
+        margin: 0;
+    }
     #contato .botoes {
         display: flex;
         justify-content: center;
@@ -341,3 +352,70 @@ h2 {
             font-size: 1.2rem;
             color: var(--cor-principal);
         }
+
+
+
+@media (min-width: 768px) {
+    header {
+        width: auto;
+        gap: 2rem;
+        padding: 1rem 2rem;
+        margin-top: 1.5rem;
+    }
+    
+
+    #capa .conteudo {
+        flex-direction: row-reverse;
+    }
+        #capa .conteudo .informacoes {
+            text-align: left;
+        }
+            #capa .botoes {
+                justify-content: flex-start;
+            }
+
+
+    #servicos .caixas {
+        display: flex;
+        flex-direction: row;
+    }
+        #servicos .caixa {
+            flex: 1;
+            padding: 3rem;
+        }
+
+
+    #habilidades .blocoHabilidades {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+        #habilidades .caixa {
+            flex: 1;
+        }
+
+
+    #resumo .conteudo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: baseline;
+        column-gap: 5rem;
+    }
+        #resumo h2 {
+            width: 100%;
+        }
+        #resumo .experiencia {
+            flex: 1;
+        }
+
+    
+    #contato {
+        background-color: inherit;
+    }
+        #contato .conteudo {
+            background-color: #0e0e0e;
+            padding: 4rem;
+            border-radius: var(--border-radius);
+        }
+        
+}
