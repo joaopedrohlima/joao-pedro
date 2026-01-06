@@ -44,7 +44,7 @@ gsap.timeline()
 
 animarSecao(
 "#sobre-mim",
-"#sobre-mim h2, #sobre-mim .informacoes > *"
+"#sobre-mim h2, #sobre-mim .informacoes"
 );
 
 
@@ -67,7 +67,7 @@ animarSecao(
 
 animarSecao(
 "#contato",
-"#contato h3, #contato .botao",
+"#contato h3, #contato .botoes",
 { scale: 0.9 }
 );
 
