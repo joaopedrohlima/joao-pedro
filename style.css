@@ -451,46 +451,19 @@ h2 {
 
 #projetos .conteudo {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-#projetos .carrossel-container {
-    position: relative;
+#projetos .grid {
     width: 100%;
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-#projetos .carrossel {
-    display: flex;
-    gap: 1.5rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding: 1rem 0.5rem;
-    scrollbar-width: thin;
-    scrollbar-color: var(--cor-principal) var(--fundo-2);
-}
-
-#projetos .carrossel::-webkit-scrollbar {
-    height: 8px;
-}
-
-#projetos .carrossel::-webkit-scrollbar-track {
-    background: var(--fundo-2);
-    border-radius: 10px;
-}
-
-#projetos .carrossel::-webkit-scrollbar-thumb {
-    background: var(--cor-principal);
-    border-radius: 10px;
 }
 
 #projetos .projeto-card {
-    min-width: 300px;
-    max-width: 350px;
-    flex: 0 0 auto;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
