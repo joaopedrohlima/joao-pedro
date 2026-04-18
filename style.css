@@ -192,7 +192,7 @@ h2 {
     z-index: 1;
 }
 
-#capa .imagem::before {
+/* #capa .imagem::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -206,7 +206,7 @@ h2 {
     background-size: contain;
     z-index: 0;
     opacity: 0.3;
-}
+} */
 
 #capa .informacoes {
     display: flex;
@@ -224,7 +224,7 @@ h2 {
     font-weight: 100;
 }
 
-#capa .segundo-texto::after {
+/* #capa .segundo-texto::after {
     content: '';
     display: inline-block;
     width: 0.2rem;
@@ -241,7 +241,7 @@ h2 {
     50% {
         opacity: 1;
     }
-}
+} */
 
 #capa span {
     color: var(--texto);
@@ -364,11 +364,23 @@ h2 {
     background-color: var(--fundo-2);
 }
 
-#habilidades .blocoHabilidades {
+#habilidades .conteudo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+#habilidades h2 {
+    width: 100%;
+}
+
+#habilidades .categoria {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 #habilidades .titulo {
@@ -385,55 +397,65 @@ h2 {
     margin-right: auto;
 }
 
-#habilidades .titulo img {
-    width: 1.2rem;
-    height: 1.2rem;
-}
-
-#habilidades .titulo span {
-    color: var(--texto);
-    font-size: 0.9rem;
-}
-
 #habilidades .caixa {
     display: flex;
     flex-direction: column;
     align-items: baseline;
-    gap: 0.5rem;
+    gap: 1.5rem;
     width: 100%;
     padding: 1.5rem;
     box-sizing: border-box;
 }
 
+#habilidades .legenda {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#habilidades .legenda span {
+    margin-left: auto;
+}
+
 #habilidades .caixa h4 {
     margin: 0;
+    font-weight: 400;
 }
 
 #habilidades .caixa .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.8rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.3rem;
     background-color: var(--cor-principal);
     border-radius: 50%;
     color: white;
-    margin-bottom: 0.5rem;
-}
-
-#habilidades .caixa .icon svg {
-    height: 1.2rem;
-    fill: currentColor;
 }
 
 #habilidades .caixa .icon i {
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
 }
 
 #habilidades .caixa span {
     color: var(--texto);
+}
+
+#habilidades .barra-progresso {
+    width: 100%;
+    height: 6px;
+    background-color: #a0aabb;
+    border-radius: 2px;
+}
+
+#habilidades .barra-progresso div {
+    height: 100%;
+    width: var(--width);
+    background-color: var(--cor-principal);
+    border-radius: 2px;
 }
 
 
@@ -458,8 +480,8 @@ h2 {
 
 #projetos .grid {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 
@@ -547,9 +569,16 @@ h2 {
 #resumo .titulo {
     display: flex;
     padding: 2rem 0;
+    gap: 1.5rem;
+}
+
+#resumo .titulo i {
+    font-size: 1.2rem;
+    color: var(--cor-principal);
 }
 
 #resumo .titulo h3 {
+    font-size: 1.4rem;
     margin: 0;
 }
 
@@ -585,9 +614,9 @@ h2 {
 }
 
 #resumo .linha-tempo .item h4 {
-    font-size: 1rem;
+    font-size: 1.3rem;
     margin: 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 #resumo .linha-tempo .legenda {
@@ -606,7 +635,7 @@ h2 {
 #contato {
     background-color: var(--fundo-2);
     border-radius: var(--border-radius) var(--border-radius) 0 0;
-    padding-top: 1rem;
+    padding-top: 3rem;
 }
 
 #contato .conteudo {
@@ -696,14 +725,19 @@ h2 {
     }
 
 
-    #habilidades .blocoHabilidades {
-        flex-direction: row;
-        flex-wrap: wrap;
+    #habilidades .categoria {
         margin-bottom: 1.5rem;
     }
 
     #habilidades .caixa {
+        width: 50%;
+        min-width: 45%;
         flex: 1;
+    }
+
+    #projetos .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
 
@@ -726,6 +760,7 @@ h2 {
 
     #contato {
         background-color: inherit;
+        padding-top: 1rem;
     }
 
     #contato .conteudo {
@@ -800,7 +835,7 @@ h2 {
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
 
-    .caixa:after {
+    /* .caixa:after {
         content: '';
         position: absolute;
         left: 0;
@@ -810,7 +845,7 @@ h2 {
         background: linear-gradient(0deg, transparent 50%, hsla(216, 28%, 39%, 0.2) 100%);
         opacity: 0;
         transition: opacity 0.4s ease;
-    }
+    } */
 
     .caixa:hover {
         transform: translateY(-6px);
@@ -834,5 +869,11 @@ h2 {
     * {
         animation: none !important;
         transition: none !important;
+    }
+}
+
+@media (width < 767px) {
+    header a:last-child {
+        display: none;
     }
 }
